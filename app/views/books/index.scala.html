@@ -1,0 +1,20 @@
+@(books:List[Book])
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>BOOKS:</h1>
+@for(book <- books){
+NAME:<a href="@routes.BooksController.show(book.name)">@book.name</a>
+<p>PRICE:@book.price</p>
+<p>AUTHOR:@book.author</p>
+<p>STATUS:@book.publisher</p>
+}
+
+</body>
+</html>
